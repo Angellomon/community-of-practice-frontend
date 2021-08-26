@@ -9,7 +9,7 @@
   let timeout;
   let timeout2;
 
-  const URL = 'https://collaboration.merck.com/sites/SoFMexico/SitePages/sos.aspx';
+  const URL = 'https://collaboration.merck.com/sites/CoPMexico';
 
   $: if (on) {
     timeout = setTimeout(() => {
