@@ -14,7 +14,7 @@
   $: if (on) {
     timeout = setTimeout(() => {
       redirect = true;
-    }, 3000);
+    }, 3500);
   } else {
     clearTimeout(timeout);
   }
@@ -73,14 +73,15 @@
     flex-direction: row;
     justify-content: center;
     background-color: #13213d;
+    /* background-color: white; */
     min-width: 100vw;
     min-height: 100vh;
   }
   .on {
     background-color: white;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
+    -webkit-transition: background-color 550ms linear;
+    -ms-transition: background-color 550ms linear;
+    transition: background-color 550ms linear;
   }
   .helper {
     color: white;
