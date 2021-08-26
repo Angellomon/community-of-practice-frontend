@@ -15,14 +15,16 @@
 
   const dispatch = createEventDispatcher();
 
-  let pieza1Hidden = true;
-  let pieza2Hidden = true;
-  let pieza3Hidden = true;
-  let pieza4Hidden = true;
-  let pieza6Hidden = true;
-  let pieza7Hidden = true;
-  let pieza8Hidden = true;
-  let pieza9Hidden = true;
+  const DEFAULT_HIDDEN = true;
+
+  let pieza1Hidden = DEFAULT_HIDDEN;
+  let pieza2Hidden = DEFAULT_HIDDEN;
+  let pieza3Hidden = DEFAULT_HIDDEN;
+  let pieza4Hidden = DEFAULT_HIDDEN;
+  let pieza6Hidden = DEFAULT_HIDDEN;
+  let pieza7Hidden = DEFAULT_HIDDEN;
+  let pieza8Hidden = DEFAULT_HIDDEN;
+  let pieza9Hidden = DEFAULT_HIDDEN;
 
   let timeout1;
   let timeout2;
@@ -33,31 +35,33 @@
   let timeout8;
   let timeout9;
 
+  const TIMEOUT_BASE = 200;
+
   const handleClick = () => {
     timeout1 = setTimeout(() => {
       pieza1Hidden = false;
-    }, 750);
+    }, TIMEOUT_BASE * 7);
     timeout2 = setTimeout(() => {
       pieza2Hidden = false;
-    }, 350);
+    }, TIMEOUT_BASE * 3);
     timeout3 = setTimeout(() => {
       pieza3Hidden = false;
-    }, 850);
+    }, TIMEOUT_BASE * 8);
     timeout4 = setTimeout(() => {
       pieza4Hidden = false;
-    }, 250);
+    }, TIMEOUT_BASE * 2);
     timeout6 = setTimeout(() => {
       pieza6Hidden = false;
-    }, 150);
+    }, TIMEOUT_BASE * 1);
     timeout7 = setTimeout(() => {
       pieza7Hidden = false;
-    }, 550);
+    }, TIMEOUT_BASE * 5);
     timeout8 = setTimeout(() => {
       pieza8Hidden = false;
-    }, 450);
+    }, TIMEOUT_BASE * 4);
     timeout9 = setTimeout(() => {
       pieza9Hidden = false;
-    }, 650);
+    }, TIMEOUT_BASE * 6);
     dispatch('click');
   };
 
@@ -77,17 +81,17 @@
   <div class="row">
     <PiezaAzul src={srcPieza1} scale={1} top={0} left={0} hidden={pieza1Hidden} />
     <PiezaAzul src={srcPieza2} scale={1} top={-15} left={-36} hidden={pieza2Hidden} />
-    <PiezaAzul src={srcPieza3} scale={1} top={-18} left={-45} hidden={pieza3Hidden} />
+    <PiezaAzul src={srcPieza3} scale={1} top={-19} left={-45} hidden={pieza3Hidden} />
   </div>
   <div class="row">
-    <PiezaAzul src={srcPieza4} scale={1.0} top={-39} left={3} hidden={pieza4Hidden} />
-    <PiezaPrincipal on:click={handleClick} scale={1} top={-56} left={-40} />
-    <PiezaAzul src={srcPieza6} scale={1} top={-41} left={-37} hidden={pieza6Hidden} />
+    <PiezaAzul src={srcPieza4} scale={1.0} top={-40} left={4} hidden={pieza4Hidden} />
+    <PiezaPrincipal on:click={handleClick} scale={1} top={-58.5} left={-39.5} />
+    <PiezaAzul src={srcPieza6} scale={1} top={-44} left={-37.5} hidden={pieza6Hidden} />
   </div>
   <div class="row">
-    <PiezaAzul src={srcPieza7} scale={1} top={-39} left={16} hidden={pieza7Hidden} />
-    <PiezaAzul src={srcPieza8} scale={1} top={-53.5} left={-37} hidden={pieza8Hidden} />
-    <PiezaAzul src={srcPieza9} scale={1} top={-51.5} left={-38} hidden={pieza9Hidden} />
+    <PiezaAzul src={srcPieza7} scale={1} top={-39.5} left={18} hidden={pieza7Hidden} />
+    <PiezaAzul src={srcPieza8} scale={1} top={-53.5} left={-37.5} hidden={pieza8Hidden} />
+    <PiezaAzul src={srcPieza9} scale={1.04} top={-52.5} left={-39} hidden={pieza9Hidden} />
   </div>
 </section>
 
@@ -96,7 +100,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     justify-content: center;
     align-items: center;
   }
