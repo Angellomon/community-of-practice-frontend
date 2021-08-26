@@ -1,15 +1,15 @@
 <script>
-  import { fade } from "svelte/transition";
-  import Titulo from "../lib/components/Titulo.svelte";
-  import { onDestroy } from "svelte";
+  import { onDestroy } from 'svelte';
+  import { fade } from 'svelte/transition';
+  import Titulo from '../lib/components/Titulo.svelte';
+  import Rompecabezas from '../lib/components/rompecabezas/Rompecabezas.svelte';
 
   let on = false;
   let redirect = false;
   let timeout;
   let timeout2;
 
-  const URL =
-    "https://collaboration.merck.com/sites/SoFMexico/SitePages/sos.aspx";
+  const URL = 'https://collaboration.merck.com/sites/SoFMexico/SitePages/sos.aspx';
 
   $: if (on) {
     timeout = setTimeout(() => {
@@ -32,6 +32,12 @@
   {#if !redirect}
     <div class="container" transition:fade>
       <Titulo {on} />
+
+      <Rompecabezas
+        on:click={() => {
+          on = true;
+        }}
+      />
 
       {#if on}
         <div class="mensaje" transition:fade>
