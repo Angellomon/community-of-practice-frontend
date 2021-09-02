@@ -28,30 +28,54 @@
   onDestroy(() => clearTimeout(timeout2));
 </script>
 
-<section class:on>
+<section class:on transition:fade>
   {#if !redirect}
-    <div class="container" transition:fade>
+    <span class="titulo">
       <Titulo {on} />
-
+    </span>
+    <span class="puzzle">
       <Rompecabezas
         on:click={() => {
           on = true;
         }}
       />
+    </span>
 
-      {#if on}
-        <div class="mensaje" transition:fade>
-          <p>Powered by Subsidiary</p>
-          <p>of the Future</p>
-        </div>
-      {:else}
-        <span class="helper">dale clic</span>
-      {/if}
-    </div>
+    {#if on}
+      <div class="mensaje">
+        <p transition:fade>Powered by Subsidiary</p>
+        <p transition:fade>of the Future</p>
+      </div>
+    {:else}
+      <span class="helper">dale clic</span>
+    {/if}
   {/if}
 </section>
 
 <style>
+  span.titulo,
+  span.puzzle,
+  span.helper,
+  div.mensaje {
+    position: absolute;
+  }
+
+  span.titulo {
+    top: 5%;
+  }
+
+  span.puzzle {
+    bottom: 40%;
+    align-self: center;
+  }
+
+  span.helper {
+    color: white;
+    text-align: center;
+    bottom: 41%;
+    align-self: center;
+  }
+
   p {
     color: #75c7ae;
     text-align: center;
@@ -59,15 +83,9 @@
     font-weight: bold;
   }
   div.mensaje {
-    margin-top: 5em;
+    bottom: 10%;
   }
-  div.container {
-    margin: 5em;
-    padding: 5em;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-  }
+
   section {
     display: flex;
     flex-direction: row;
@@ -76,16 +94,12 @@
     /* background-color: white; */
     min-width: 100vw;
     min-height: 100vh;
+    position: relative;
   }
   .on {
     background-color: white;
     -webkit-transition: background-color 550ms linear;
     -ms-transition: background-color 550ms linear;
     transition: background-color 550ms linear;
-  }
-  .helper {
-    color: white;
-    text-align: center;
-    margin-top: 15%;
   }
 </style>
