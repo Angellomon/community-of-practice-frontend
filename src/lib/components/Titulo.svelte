@@ -8,13 +8,13 @@
 
 <style>
   h2 {
-    color: white;
+    color: #6eceb2;
     font-size: 2.9em;
-    text-align: right;
+    text-align: left;
     line-height: 1em;
     /* margin-top: -100px; */
   }
   .on {
-    color: #3b726c;
+    color: #6eceb2;
   }
 </style>
