@@ -42,12 +42,11 @@
     </span>
 
     {#if on}
-      <div class="mensaje">
-        <p transition:fade>Powered by Subsidiary</p>
-        <p transition:fade>of the Future</p>
+      <div class="mensaje" transition:fade={{ duration: 400, delay: 200 }}>
+        <p>powered by subsidiary of the future</p>
       </div>
     {:else}
-      <span class="helper">dale clic</span>
+      <span class="helper" transition:fade={{ duration: 250, delay: 300 }}>dale clic</span>
     {/if}
   {/if}
 </section>
@@ -72,18 +71,19 @@
   span.helper {
     color: white;
     text-align: center;
-    bottom: 41%;
+    bottom: 25%;
     align-self: center;
   }
 
+  div.mensaje {
+    bottom: 25%;
+  }
+
   p {
-    color: #13213d;
+    color: #6eceb2;
     text-align: center;
     margin: 0;
     font-weight: bold;
-  }
-  div.mensaje {
-    bottom: 10%;
   }
 
   section {
