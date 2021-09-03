@@ -18,7 +18,7 @@
   {#if !hidden}
     <img
       {src}
-      transition:fade
+      in:fade
       alt=""
       width={PIEZA_LENGTH * scale}
       height={PIEZA_LENGTH * scale}
