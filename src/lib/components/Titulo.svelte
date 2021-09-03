@@ -4,7 +4,7 @@
   export let on = false;
 </script>
 
-<h2 class:on><Emphasis>community</Emphasis><br />of practice</h2>
+<h2 class:on>community<br /><Emphasis>of practice</Emphasis></h2>
 
 <style>
   h2 {
