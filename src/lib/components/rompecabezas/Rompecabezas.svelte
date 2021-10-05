@@ -2,16 +2,16 @@
   import { createEventDispatcher } from 'svelte';
   import PiezaPrincipal from './PiezaPrincipal.svelte';
   import PiezaAzul from './PiezaAzul.svelte';
-
-  import srcPieza1 from '../../../assets/piezas/09.png';
-  import srcPieza2 from '../../../assets/piezas/08.png';
-  import srcPieza3 from '../../../assets/piezas/07.png';
-  import srcPieza4 from '../../../assets/piezas/06.png';
-  import srcPieza6 from '../../../assets/piezas/04.png';
-  import srcPieza7 from '../../../assets/piezas/03.png';
-  import srcPieza8 from '../../../assets/piezas/02.png';
-  import srcPieza9 from '../../../assets/piezas/01.png';
   import { onDestroy } from 'svelte';
+
+  const srcPieza1 = '/piezas/09.png';
+  const srcPieza2 = '/piezas/08.png';
+  const srcPieza3 = '/piezas/07.png';
+  const srcPieza4 = '/piezas/06.png';
+  const srcPieza6 = '/piezas/04.png';
+  const srcPieza7 = '/piezas/03.png';
+  const srcPieza8 = '/piezas/02.png';
+  const srcPieza9 = '/piezas/01.png';
 
   const dispatch = createEventDispatcher();
 

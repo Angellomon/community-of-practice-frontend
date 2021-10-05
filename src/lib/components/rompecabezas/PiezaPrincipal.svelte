@@ -3,7 +3,7 @@
   import { fade } from 'svelte/transition';
   import { PIEZA_LENGTH } from '../../util';
 
-  import src from '../../../assets/piezas/05.png';
+  const src = '/piezas/05.png';
 
   export let top = 0;
   export let left = 0;

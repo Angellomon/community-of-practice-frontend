@@ -1,6 +1,6 @@
 <script>
-  import Router from "svelte-spa-router";
-  import { routes } from "./routes";
+  import Router from 'svelte-spa-router';
+  import { routes } from './routes';
 </script>
 
 <main>
@@ -10,10 +10,10 @@
 <style>
   @font-face {
     font-family: Invention;
-    src: url("/fonts/Invention_W_Rg.woff2");
+    src: url('/fonts/Invention_W_Lt.woff2');
   }
 
   :root {
-    font-family: "Invention", sans-serif;
+    font-family: 'Invention', sans-serif;
   }
 </style>
